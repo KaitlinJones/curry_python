@@ -1,8 +1,11 @@
 
-#indeces
+# id function
 
-poem = "Where am I?"
+task = "Subscribe"
+print(id(task))
+task = "like"
+print(id(task))
 
-start = 6
-print(poem[start:start+2])
 
+# mutable and immutable objects 
+# strings do not support item assignment
