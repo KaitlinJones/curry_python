@@ -2,5 +2,7 @@
 #indeces
 
 poem = "Where am I?"
-print(poem[:-7])
+
+start = 6
+print(poem[start:start+2])
 
