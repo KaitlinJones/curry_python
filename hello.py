@@ -1,4 +1,8 @@
 
-# indexing
+# slicing
+# sub string
 poem = "Where am I?"
-print(poem[50])
+print(poem[:6])
+
+#left of colon = inclusive
+#right of colon = exclusive
