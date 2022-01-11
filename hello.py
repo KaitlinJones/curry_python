@@ -1,5 +1,5 @@
 
 msg = "please subscribe"
-#print(msg[15])
 
-print(len(msg))
+
+print("You're message was",  str(len(msg)), "characters long.")
