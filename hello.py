@@ -1,5 +1,7 @@
 # 1:22:40 STRINGS
+# concatenation 
+msg = "You're pretty"
+msg2 = "hmu"
+print(msg + "..." + msg2)
 
-msg = '"You\'re pretty"'
-
-print(msg)
+# expecting 1 argument --> concatenation
