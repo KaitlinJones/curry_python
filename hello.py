@@ -1,23 +1,7 @@
-"""
+# pow
 import math 
+result = math.pow(3, 3)
 
-result = 10 // 3 
+print(3 ** 5)
 
 print(result)
-"""
-
-# / float division
-# // int division, math.floor
-
-"""
-pizza = 10
-people = 3
-
-print("leftover", pizza % people) 
-
-"""
-
-number = 34545
-limit = 10
-
-print(number % limit)
