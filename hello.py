@@ -1,7 +1,8 @@
 # 1:22:40 STRINGS
 # concatenation 
-msg = "You're pretty"
-msg2 = "hmu"
-print(msg + "..." + msg2)
+msg = ("This is a longs string...."
+"continued")
 
-# expecting 1 argument --> concatenation
+print(msg)
+
+# literal concatenation
