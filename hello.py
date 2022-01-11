@@ -1,10 +1,12 @@
 
 # id function
 
-task = "Subscribe"
-print(id(task))
-task = "like"
-print(id(task))
+task = ["Subscribe"]
+different = task
+
+different[0] = 'hey' 
+
+print(task)
 
 
 # mutable and immutable objects 
