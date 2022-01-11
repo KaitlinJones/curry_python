@@ -1,8 +1,6 @@
 
-# slicing
-# sub string
-poem = "Where am I?"
-print(poem[:6])
+#indeces
 
-#left of colon = inclusive
-#right of colon = exclusive
+poem = "Where am I?"
+print(poem[:-7])
+
