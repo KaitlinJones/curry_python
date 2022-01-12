@@ -1,5 +1,11 @@
 # logic
-age = 15
-can_drink = age > 20
-print(can_drink)
+print("what is your age?")
+age = int(input())
+
+if age > 20:
+    print("Welcome to our app!")
+
+
+
+
 
