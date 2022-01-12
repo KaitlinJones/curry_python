@@ -1,18 +1,10 @@
-import math
-age = 15
-age_str = str(age)
-id_age_str = id(age_str)
-other = math.floor(2.6)
-added = id_age_str + other
-added_str = str(added)
-length = len(added_str)
+# lists
+ages = [12,18,28]
 
-print(length)
-print(added_str)
-print(added)
-print(other)
-print(id_age_str)
+people = ["Caleb", "Sabrina", "emily"]
 
+my_favorite_things = ["working out", 7, ['amazon prime', 'netflix']]
 
-print(len(str(id(str(age))+ math.floor(2.6))))
-
+print(ages)
+print(people)
+print(my_favorite_things)
