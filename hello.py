@@ -1,10 +1,13 @@
 # lists
 
+import copy
+
 my_favorite_things = ["working out", 7, ['amazon prime', ['netflix', 'hulu']]]
-copy = my_favorite_things.copy()
+c = copy.deepcopy = my_favorite_things.copy()
 
-print(copy)
+print(c)
 
-copy[0]= "walking"
+print(id(c[2]))
+print(id(my_favorite_things[2]))
 
-print(my_favorite_things[2][1][0])
+print(my_favorite_things, c)
