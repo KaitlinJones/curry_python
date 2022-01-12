@@ -1,129 +1,137 @@
-#Welcome. We are going to be working through python
-#It should be pretty easy to follow along with but if you struggle
-#I have a beginner series as well
+
+########## INSERT INTO MIDDLE OF LIST ##########
+
+#Lists are ordered, and this order may matter to you. 
+
+work_days = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"]
+
+#OVERTIME!
+work_days.insert(2, "Wednesday") #index, "data"
+
+print(work_days)
+
+#What if we want to do the opposite and take a day out?
 
 
-########## APPEND TO LIST #########
+########## REMOVE ELEMENT FROM LIST BY VALUE OR INDEX ##########
 
 
-healthy = ["pizza", "frozen custard"]
+#We learned how to remove by value:
 
-healthy.append("apple crisp")
+work_days = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"]
 
-print(healthy)
+#VACATION DAY!
+work_days.remove("Saturday")
+print(work_days)
 
+#However, removing by index is also useful:
+work_days = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"]
 
-########## CHECKING IF ELEMENT IN LIST #########
-
-
-#Obviously on our health adventures we want to know if something is healthy.
-
-print("chicken pot pie" in healthy)
-
-#This returns True / False. Can use in keyword within if
-
-backpack = ["pizza", "chicken pot pie", "kale chips"]
-
-if("pizza" in healthy):
-    print("eating it")
-
-#We can make this more dynamic. Let's remove pizza from list. 
+del work_days[0]
+print(work_days)
 
 
-########## REMOVING FROM LIST ##########
+########## REMOVE ELEMENT WITH POP ##########
 
 
-healthy = ["pizza", "frozen custard"]
-backpack = ["pizza", "chicken pot pie", "kale chips"]
+#The benefit here is the method returns the element
+work_days = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"]
+popped = work_days.pop(1)
 
-if("pizza" in healthy):
-    backpack.remove("pizza")
+print("You removed " + popped)
+print(work_days)
+
+
+########## REMOVE ELEMENT FROM LIST USING DEL AND SLICE ##########
+
+
+work_days = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"]
+
+del work_days[0:2] #remove first 2
+print(work_days)
+
+del work_days[-2:] #remove last 2 (start 2 from right and go to end)
+print(work_days)
+
+
+########## REMOVING ALL OCCURANCES IN LIST ##########
+
+backpack = ["pizza slice", "button", "pizza slice", "fishing pole", 
+"pizza slice", "nunchucks", "pizza slice", "sandwich from mcdonalds"]
+
+backpack.remove("pizza slice")
+print(backpack) #SO MUCH PIZZA!
+
+while("pizza slice" in backpack):
+    backpack.remove("pizza slice")
 
 print(backpack)
 
+#This may not be the most optimized solution as each removal requires
+#an iteration from backpack.count. 
+#You should also avoid modifying a list while iterating, so a for-in loop is bad
 
-########## LIST COMPREHENSION ##########
+#for item in backpack:
+#    if(item == "pizza slice"):
+#        backpack.remove(item)
 
+#The original solution is fine for removing data from reasonably sized lists
 
-healthy = ["kale chips", "broccoli"]
-backpack = ["pizza", "frozen custard", "apple crisp", "kale chips"] 
+#Here is a better solution:
+backpack = ["pizza slice", "button", "pizza slice", "fishing pole", 
+"pizza slice", "nunchucks", "pizza slice", "pizza slice", "sandwich from mcdonalds"]
 
-backpack[:] = [item for item in backpack if item in healthy]
-#slice --> [:] keeps same object id
+for item in backpack[:]: #uses copy to keep index
+    if item == "pizza slice":
+        backpack.remove(item)
+
 print(backpack)
 
-#similar to this (except thi one creates new var):
-healthy_backpack = []
+#Here is a list comprehension version:
+backpack = ["pizza slice", "button", "pizza slice", "fishing pole", 
+"pizza slice", "nunchucks", "pizza slice", "pizza slice", "sandwich from mcdonalds"]
 
-for item in backpack:
-    if item in healthy:
-        healthy_backpack.append(item.upper())
+backpack[:] = [item for item in backpack if item != "pizza slice"]
 
-print(healthy_backpack)
+print(backpack)
 
-
-########## LIST COMPREHENSION ESSENTIALS ##########
+########## REVERSE LIST ##########
 
 
-squares = [i**2 for i in range(10) if i % 2 == 0]
-print(squares)
+backpack = ["pizza slice", "button", "pizza slice", "fishing pole", 
+"pizza slice", "nunchicks", "pizza slice", "sandwich from mcdonalds"]
+
+print(backpack)
+backpack.reverse()
+print(backpack)
 
 
-########## COUNTING ELEMENTS IN LIST ##########
+########## SWAP AND REVERSE ALGORITHMS ##########
 
-healthy = ["pizza", "frozen custard"]
-backpack = ["pizza", "chicken pot pie", "kale chips"]
+data = ["a", "b", "c", "d", "e", "f", "g", "h"]
 
-print(len(healthy), len(backpack))
+for index in range(len(data) // 2):
+    data[index], data[-index-1] = data[-index-1], data[index]
 
-#You may think of something like healthy.size() or healthy.length() or even healthy.count()
-#This is not quite what we are looking for. 
-#count is used to count a particular element in a list. Up next!
+print(data)
 
 
-########## COUNT / CHECK IF ELEMENT EXISTS ##########
+########## REVERSED ITERATOR ##########
 
 
-print(backpack.count("pizza")) #number of pizza in list
+data = ["a", "b", "c", "d", "e", "f", "g", "h"]
 
-backpack = ["pizza slice", "pizza slice", "pizza slice"]
+data_reversed = []
 
-print(backpack.count("pizza slice")) #3
+for item in reversed(data):
+    data_reversed.append(item)
 
-#This can be used to prevent too many items:
-if(backpack.count("pizza slice") < 3):
-    backpack.append("pizza slice")
-    print("You put a piece of pizza in your backpack")
-else:
-    print("How about you go to the gym?")
+print(data)
+print(data_reversed)
 
 
-########## INTRO TO SETS ##########
+########## REVERSE USING SLICING ##########
 
-
-#Don't care about order
-#Just need to know yes or no? 
-#Sets...
-
-backpack2 = {"sword", "rubber duck", "sice a pizza", "parachute", "sword"}
-print("sword" in backpack2)
-
-
-########## COUNTING WITH LIST COMPREHENSION ##########
-
-
-backpack = ["sword", "rubber duck", "slice of pizza", "parachute",
-"sword", "rubber duck", "slice of pizza", "parachute", 
-"sword", "rubber duck", "slice of pizza", "parachute", 
-"sword", "rubber duck", "slice of pizza", "parachute",
-"cannon", "laser cannon", "Canon 90D", "can of soup"]
-
-counts = [[backpack.count(item), item] for item in set(backpack)]
-
-print(counts)
-
-
-########## COUNTING ELEMENTS WITH COUNTER ##########
-
-from collections import Counter 
-print(Counter(backpack))
+data = ["a", "b", "c", "d", "e", "f", "g", "h"]
+data[:] = data[::-1]
+print(data)
