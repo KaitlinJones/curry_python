@@ -1,15 +1,14 @@
-# break statement
-languages = ["C++", "Java", "Python", "Javascript"]
+# continue statement
+languages = ["C++", "Java", "Python", "Javascript", "Python"]
 
 print("What are you searching for?")
 lang = input()
 
 for language in languages:
-    print(language)
     if language == lang:
         print("We found " + lang)
-        break
-    print("End of iteration")
+        continue
+    print(language + "...Not what we are looking for...")
 
 
 
