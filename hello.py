@@ -7,10 +7,10 @@ lang = input()
 for language in languages:
     if language == lang:
         print("We found " + lang)
-        continue
-    print(language + "...Not what we are looking for...")
+    else:
+        print(language + "...Not what we are looking for...")
 
-
+# searches through the list and continues to search after condition is true...
 
 
 
