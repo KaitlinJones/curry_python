@@ -1,10 +1,9 @@
-# and operator
-subscribed = True
-points = 50
+# not operator
+subscribed = False
+points = 19
 
-if subscribed and points >30:
-    print("welcome")
-    points -= 30
-    print("points is now :", points)
+if not subscribed and points < 20:
+    print("redirecting to subscription page")
+    
 
-
+print("Not subscribed")
