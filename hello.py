@@ -1,13 +1,16 @@
-# while loop
+# else clause combined with while loop
+numbers = [5, 3, 6, 7, 4, 2, 4, 3]
 
-i = 0 # intialization 
-while i < 10 : # condition
-    print(i)
-    i += 1 # update
-# counts up to 10
-print()
+i = 0
+square = 500
 
-for i in range(0, 10, 1):
-    print(i)
+while i < len(numbers):
+    if numbers[i] ** 2 > square:
+        print (numbers[i], "squared is larger than", square)
+        break
+    else:
+        print(numbers[i], "squared is not larger than", square)
+    i += 1
 
-# same out put; while loop is more versatile, for loop is less verbose 
+else: 
+    print("None squared are larger than", square)
