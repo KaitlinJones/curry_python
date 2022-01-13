@@ -1,9 +1,9 @@
-# not operator
-subscribed = False
-points = 19
+# LOOPS 
+friends = ["abby", "Jonathon", "Becky", "Ryan"]
 
-if not subscribed and points < 20:
-    print("redirecting to subscription page")
-    
+#print(friends)
 
-print("Not subscribed")
+for friend in friends:
+    print(friend, end= " ")
+
+print()
