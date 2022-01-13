@@ -1,3 +1,5 @@
-# LOOPS 
-for i in range(10):
-    print("iteration", i + 1)
+# for loop
+for i in range(231, 501):
+    print(i, i + 1, end = " ")
+
+print()
