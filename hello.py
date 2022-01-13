@@ -1,14 +1,12 @@
-# get the sum of numbers within a range
-sum = 0
+# turn a range into a list:
 
 for i in range(10):
-    print(i)
-    sum += i
-    
-print(sum)
+    print(i, end=" ")
+print()
 
+my_list = list(range(10))
+print(my_list)
 
-# print(sum(range(10))) #easy way 
 
 
 
