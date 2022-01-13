@@ -1,10 +1,10 @@
-# logic
-name = "Claire"
+# and operator
+subscribed = True
+points = 50
 
-if True or print ("heyyyyyy"):
-    print("Unite!")
-    print("alot of stuff")
-    input()
-
+if subscribed and points >30:
+    print("welcome")
+    points -= 30
+    print("points si now :", points)
 
 
