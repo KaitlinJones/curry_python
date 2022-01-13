@@ -1,12 +1,12 @@
-# else keyword with loops
-languages = ["C++", "Java", "Python", "Javascript", "Python"]
+# while loop
 
-print("What are you searching for?")
-lang = input()
+i = 0 # intialization 
+while i < 10 : # condition
+    print(i)
+    i += 1
+# counts 1-10
 
-for language in languages:
-    if language == lang:
-        print(language + " was found.")
-        break
-else: 
-    print("not found")
+i = 10
+while i >= 0:
+    print (i)
+    i -= 1
