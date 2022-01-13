@@ -1,12 +1,14 @@
-# control the count 
-for i in range(230, 501, 2):
-    print(i, i + 1, end = " ")
+# get the sum of numbers within a range
+sum = 0
 
-print()
-print()
+for i in range(10):
+    print(i)
+    sum += i
+    
+print(sum)
 
-# backwards 
-for i in range(200, 0, -1):
-    print(i, i + 1, end = " ")
 
-print()
+# print(sum(range(10))) #easy way 
+
+
+
