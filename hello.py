@@ -1,4 +1,4 @@
-# pass statement
+# else keyword with loops
 languages = ["C++", "Java", "Python", "Javascript", "Python"]
 
 print("What are you searching for?")
@@ -6,10 +6,7 @@ lang = input()
 
 for language in languages:
     if language == lang:
-        pass
-        
-def placeholder():
-    pass
-
-# pass can act as a placeholder
-
+        print(language + " was found.")
+        break
+else: 
+    print("not found")
