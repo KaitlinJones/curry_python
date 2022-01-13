@@ -1,20 +1,15 @@
-# print range & list:
+# break statement
+languages = ["C++", "Java", "Python", "Javascript"]
 
-foods = ["asparagus", "tacos", "strawberries", "yogurt", "bagels"]
+print("What are you searching for?")
+lang = input()
 
-for i in range(10):
-    print(i, end = " ")
-print()
-
-for food in foods:
-    print(food, end = " ")
-print()
-
-print(len(foods))
-
-for i in range(len(foods)):
-    print(i + 1, foods[i], end = " ")
-print()
+for language in languages:
+    print(language)
+    if language == lang:
+        print("We found " + lang)
+        break
+    print("End of iteration")
 
 
 
