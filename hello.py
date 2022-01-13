@@ -1,9 +1,3 @@
 # LOOPS 
-friends = ["abby", "Jonathon", "Becky", "Ryan"]
-
-#print(friends)
-
-for friend in friends:
-    print(friend, end= " ")
-
-print()
+for i in range(10):
+    print("iteration", i + 1)
