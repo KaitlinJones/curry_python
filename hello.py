@@ -1,9 +1,10 @@
 # logic
 name = "Claire"
 
-if False or print ("heyyyyyy"):
+if True or print ("heyyyyyy"):
     print("Unite!")
-
+    print("alot of stuff")
+    input()
 
 
 
